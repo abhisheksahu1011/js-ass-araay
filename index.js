@@ -106,11 +106,66 @@ const highAge = (N, Arr) =>
    return B;
 };
 
-// 
+// //Increment the array elements
+
+const Inc_Arr = (array,N) =>
+{
+  array.forEach(function(val){
+    val+=1;
+    console.log(val);
+  })
+   
+ 
+ };
 
 
+ //Pass or fail
+
+const isAllPass = (N, Arr) => 
+{
+   return Arr.every((i)=>i>=32)?"YES":"NO"; 
+};
+
+//Unique color shirt
+
+function Unique_Shirts (arr,N) {
+
+  let unique=arr.filter((value)=>arr.indexOf(value)===arr.lastIndexOf(value));
+  return (unique.length); 
+  };
+
+  // //Min and Max
+
+  // For Min:
+  let min=arr[0];
+  for(let i of arr){
+    if(min>i){
+      min=i;
+    }
+  }return min; 
+
+  // For Max: 
+  let max=arr[0]
+  for(let i of arr){
+      if(max< i){
+        max=i;
+      }
+    }return max;
 
 
+    // Birthday Game
+
+    let finalCount=0;
+            for(let i=0;i<(arr.toString().length-M);i++){
+              let count=0;
+              for(let j=i;j<(i+M);j++){
+                count+=arr[j];
+              }
+              if(count===D){
+                finalCount+=1
+              }
+            }
+            return finalCount; 
 
 
 
